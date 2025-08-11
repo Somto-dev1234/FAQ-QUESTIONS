@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+--White:hsl(0, 100%, 100%);
+--Purple-100:hsl(275, 100%, 97%);
+--Purple-600:hsl(292, 16%, 49%);
+--Purple-950:hsl(292, 42%, 14%);
+--Font-size: 16px;
+}
+body{
+    font-family: "Work Sans", sans-serif;
+    background-color: var(--Purple-100);
+    background-image: url("FAQ PROJECTS/assets/images/background 1.svg");
+    font-size: var(--Font-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+}
+
+.faq{
+    background-color: var(--White);
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 90vw;
+    box-shadow: 0 20px 40px rgb(0,0,0,0.1);
+}
+
+.faq_header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.faq__icon-star,.faq__toggle-icon{
+      width: 24px;
+      height: 24px;
+}
+
+h1{
+    font-size: 1.75rem;
+    Color: var(--Purple-600);
+}
+
+.faq__item{
+    border-bottom: 1px solid var(--Purple-100);
+    padding: 16px 0;
+}
+.faq__question {
+    font-weight: 600;
+    color: var(--Purple-950);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    padding: 0;
+}
+
+.faq__question:focus {
+    outline: 2px solid var(--Purple-600);
+    outline-offset: 2px;
+}
+
+.faq__toggleicon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq__question[aria-expanded="true"] .faq__toggleicon{
+    transform: rotate(180deg);
+}
+
+.faq_answer{
+    color: var(--White);
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+    display: none;
+    line-height: 1.5;
+}
+.faq__question[aria-expanded="true"] + .faq_answer{
+    display: block;
+}
+
+@media (min-width: 768px){
+    body{
+        padding: 4rem 2rem;
+    }
+}
+
+.faq {
+    padding: 2.5rem 3rem;
+    max-width: 600px;
+}
+
+.faq-title {
+    font-size: 2.25rem;
+}
+
+.faq_icon{
+    width: 28px;
+    height: 28px;
+}
+
+.faq__question {
+    font-size: 1.1rem;
+}
+
+.faq_answer {
+    font-size: 1rem;
+    display: none;
+}
